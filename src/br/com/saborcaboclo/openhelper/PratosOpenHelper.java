@@ -30,7 +30,6 @@ public class PratosOpenHelper extends SQLiteOpenHelper {
 				+ "PRIMARY KEY (ID));";
 
 		db.execSQL(sqlCreate);
-		Log.d("ciro", "OPENHELPER 2");
 		String sqlInsert = "INSERT INTO PRATOS VALUES("
 				//ID
 				+ "'1',"
@@ -73,7 +72,49 @@ public class PratosOpenHelper extends SQLiteOpenHelper {
 				//FAVORITA
 				+ "'0');";
 		db.execSQL(sqlInsert);
-		Log.d("ciro", "OPENHELPER 3");
+		
+		sqlInsert = "INSERT INTO PRATOS VALUES("
+				//ID
+				+ "'2',"
+				//NOME
+				+ "'Receita de Moqueca de Peixe com Pirão',"
+				//INGREDIENTES
+				+ "'1kg de peixe (pequenos, pacu, por exemplo) inteiros \n"
+				+ "2 colheres (sopa) de coentro picado \n"
+				+ "1 cebola média cortada em quartos \n "
+				+ "2 colheres de cebolinha verde picada \n"
+				+ "2 tomates médios sem sementes, cortados \n"
+				+ "Sal e pimenta do reino a gosto \n"
+				+ "2 colheres (sopa) de suco de limão. \n"
+				+ "Pirão: \n"
+				+ "1 colher (sopa) de azeite de oliva \n"
+				+ "1 cebola pequena bem picada \n"
+				+ "1 colher (sopa) de coentro picado \n"
+				+ "1 xícara de farinha de mandioca \n"
+				+ "4 xícaras de água',"
+				//RECEITA
+				+ "'Limpe os peixes, lave e deixe escorrer. \n"
+				+ "No copo do liquidificador, coloque coentro, cebola, cebolinha, tomates, sal, pimenta do reino e bata até triturar. \n"
+				+ "Coloque os peixes em uma tigela, tempere com suco de limão, cubra com a mistura triturada envolvendo bem e deixe descansar por 1 hora. \n "
+				+ "Acenda a churrasqueira ou pré aqueça o forno em temperatura alta (220º C). \n"
+				+ "Coloque os peixes em uma folha nova e bem lavada de bananeira, enrole-a sobre os peixes, leve à grelha ou ao forno e asse por cerca de 30 minutos. \n"
+				+ "Pirão: \n"
+				+ "Coloque azeite em uma panela, aqueça em fogo alto, junte cebola, deixe dourar, acrescente coentro e misture por cerca de 2 minutos.  \n"
+				+ "Dissolva farinha de mandioca na água, despeje na panela e cozinhe, mexendo sempre para não empelotar, até obter um pirão homogêneo e cremoso. \n"
+				+ "Tire do fogo e sirva a moqueca acompanhada do pirão.',"
+				//RENDIMENTO
+				+ "'04 porções',"
+				//DIFICULDADE
+				+ "'fácil',"
+				//TMP_PREP (tempo de preparo)
+				+ "'50 min',"
+				//CATEGORIA
+				+ "'PEIXES',"
+				//FOTO
+				+ "'1',"
+				//FAVORITA
+				+ "'0');";
+		db.execSQL(sqlInsert);
 	}
 
 	@Override
