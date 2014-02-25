@@ -26,6 +26,7 @@ public class PratosOpenHelper extends SQLiteOpenHelper {
 				+ "TMP_PREP VARCHAR(20),"
 				+ "CATEGORIA VARCHAR(20),"
 				+ "FOTO TEXT,"
+				+ "FAVORITA INTEGER NOT NULL,"
 				+ "PRIMARY KEY (ID));";
 
 		db.execSQL(sqlCreate);
@@ -68,7 +69,9 @@ public class PratosOpenHelper extends SQLiteOpenHelper {
 				//CATEGORIA
 				+ "'PEIXES',"
 				//FOTO
-				+ "'1');";
+				+ "'1',"
+				//FAVORITA
+				+ "'0');";
 		db.execSQL(sqlInsert);
 		Log.d("ciro", "OPENHELPER 3");
 	}
